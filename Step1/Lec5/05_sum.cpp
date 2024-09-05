@@ -1,26 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+int cnt = 1;
 int N;
 
-void print(int n)
+int sum = 0;
+void print()
 {
-
     cin >> N;
-
-    if (n == 0)
+    if (cnt > N)
     {
         return;
     }
     else
     {
-        cout << n << endl;
-
-        print(n - 1);
+        sum = sum + cnt;
+        cnt++;
+        print();
     }
 }
 int main()
 {
-    print(N);
+    print();
+    cout << sum;
+
     return 0;
 }
